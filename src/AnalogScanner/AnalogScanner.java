@@ -108,7 +108,7 @@ public class AnalogScanner implements AutoCloseable {
     }
 
     private boolean checkWord(){
-        return Character.isLetter(getCurrentChar()) || getCurrentChar() == '\'' || getCurrentChar() == '-';
+        return Character.isLetter(getCurrentChar()) || getCurrentChar() == '\'' || Character.DASH_PUNCTUATION == Character.getType(getCurrentChar());
     }
 
     private char getCurrentChar() {

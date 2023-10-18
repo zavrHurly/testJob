@@ -42,7 +42,7 @@ public class WordStatInputScanner implements WordStatInput
         }
 
         private void addCharToBuffer(char character, StringBuffer buffer) {
-                if(Character.isLetter(character) || character == '\'' || character == '-'){
+                if(Character.isLetter(character) || character == '\'' || Character.DASH_PUNCTUATION == Character.getType(character)){
                         buffer.append(character);
                 } else {
                         buffer.append(' ');
