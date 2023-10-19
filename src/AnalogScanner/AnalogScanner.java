@@ -55,7 +55,7 @@ public class AnalogScanner implements AutoCloseable {
 
     public String nextLine() throws IOException {
         final StringBuilder text = new StringBuilder();
-        if(index > 0) beginToString();
+        beginToString();
         while (!endLine()) {
             text.append(getCurrentChar());
             toNextChar();
